@@ -861,7 +861,7 @@
     <section class="contact bg-primary text-center" id="about">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 mx-auto">
+          <div class="col-md-12 mx-auto">
             <h2>The CCI Toolbox (Cate) is a software environment for ingesting,
               operating on and visualising all ESA Climate Change Initiative data.
             </h2>
@@ -876,7 +876,7 @@
 
     <!-- Interfaces panel -->
 
-    <section class="contact text-center" style="background-color:#FFB031">
+    <section class="contact text-center" id="interfaces" style="background-color:#FFB031">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 my-auto text-center">
@@ -995,11 +995,11 @@
             			</div>
             			<div class="desc">
                             Download version 1.0:<br/>
-                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-MacOSX-x86_64.sh">Core</a> | <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/Cate.Desktop-1.0.0.dmg">Desktop</a> for Mac<br/>
-                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-Linux-x86_64.sh">Core</a> | <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-desktop-1.0.0-x86_64.AppImage">Desktop</a> for Linux<br/>
-                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-Windows-x86_64.exe">Core</a> | <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/Cate.Desktop.Setup.1.0.0.exe">Desktop</a> for Windows<br/>
+                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-MacOSX-x86_64.sh">Core</a> & <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/Cate.Desktop-1.0.0.dmg">Desktop</a> for Mac<br/>
+                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-Linux-x86_64.sh">Core</a> & <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-desktop-1.0.0-x86_64.AppImage">Desktop</a> for Linux<br/>
+                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-Windows-x86_64.exe">Core</a> & <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/Cate.Desktop.Setup.1.0.0.exe">Desktop</a> for Windows<br/>
                             Or visit Cate's <a href="https://github.com/CCI-Tools/cate/releases">releases</a>
-                            page on GitHub for older versions.
+                            page on GitHub <br>for older versions.
                         </div>
             		</div>
             	</li>
@@ -1013,9 +1013,10 @@
                       <span class="time">On your computer</span>
                     </span>
             			</div>
-            			<div class="desc">If you're on Mac or Linux, do this in a terminal window:<br>
-                          <code>$ bash cate-&lt;version&gt;-&lt;platform&gt;.sh</code><br/>
-                            Windows users double-click.
+            			<div class="desc">Mac & Linux users do this in a terminal window:<br/>
+                          <code style="color:white;font-style:normal;background-color:#4C4C4C;">
+                            $bash cate-&lt;version&gt;-&lt;platform&gt;.sh</code><br/>
+                            Windows users just double-click.
                         </div>
             		 </div>
             	</li>
@@ -1037,7 +1038,7 @@
              </ul>
            </div>
               <p style="color:#FFCCCC">
-                  Details on the Cate system requirements, installation, and configuration can be found in the
+                  Details on the Cate system requirements, installation, <br>and configuration can be found
                   <a href="http://cate.readthedocs.io/en/latest/user_manual/um_setup.html">here</a>.
               </p>
           </div>
@@ -1087,24 +1088,23 @@
             <h2>CCI data sources in<br/>CCI Toolbox v1.0</h2>
             <p style="color:#F4B12A"></p>
             <p style="color:#FFCCCC">
-              Almost all ESA CCI datasets published through the ESA <a href="http://cci.esa.int/">CCI Open Data <br>Portal</a>
-              can be accessed by Cate's Python API and Command-Line Interface.
+              All ESA CCI datasets published through the
+              ESA <a href="http://cci.esa.int/">CCI Open Data Portal</a><br>
+              can be typically accessed by Cate's
+              <a class="js-scroll-trigger" href="#interfaces">Python API</a>.
+              and
+              <a class="js-scroll-trigger" href="#interfaces">Command Line Interface</a>.
               <br/><br/>
-              For Cate Desktop, we have
-              limited the number of CCI datasets :
-              our software <br> is developed through an Agile methodology, releasing software
-                            <text style="color:White;font-style: italic;">early</text> and<br>
-                            <text style="color:White;font-style: italic;">frequently</text>,
-                            and reacting flexibly and quickly to user needs.
-
-              <br><br/>
-              Cate Desktop currently supports the following CCI datasets - Aerosol CCI (x6),<br>
+              For <text style="color:White;">version 1.0</text> of the CCI Toolbox
+              we have limited the number of CCI datasets available
+              to the Cate Desktop, our
+              <a class="js-scroll-trigger" href="#interfaces">Graphical User Interface</a>.
+              Cate Desktop currently supports the following CCI datasets - Aerosol CCI (x6),
               Cloud CCI (x6), Fire CCI (x1),
               Ocean Colour CCI (x28),
-              Ozone CCI (x2),<br>
+              Ozone CCI (x2),
               Soil Moisture CCI (x3), and
-              Sea Surface Temperature CCI (x1). More are on the way.
-            </p>
+              Sea Surface Temperature CCI (x1).<br> More are on the way.
           </div>
           <div class="col-md-4">
               <img alt="githubLogo" src="img/if_stack_1287510.png" width="230" />
