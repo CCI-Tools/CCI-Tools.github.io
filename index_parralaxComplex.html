@@ -216,7 +216,7 @@
   .desc {
     margin: 1em 0.75em 0 0;
     font-size: 0.77777em;
-    font-style: normal;
+    font-style: italic;
     line-height: 1.5em;
   }
 
@@ -357,7 +357,7 @@
 
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 25px;
+    padding: 0 15px;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   }
 
@@ -554,7 +554,7 @@
   .desc {
     margin: 1em 0.75em 0 0;
     font-size: 0.77777em;
-    font-style: normal;
+    font-style: italic;
     line-height: 1.5em;
   }
 
@@ -800,66 +800,160 @@
 
   .stretch { min-width:100%; min-height:100%; width:auto; height:auto; }
 
-  // Parallax borders between sections
 
-  body {
-  	margin: 0;
+
+
+
+
+
+
+
+
+
+  body{
+    /*background:rgba(230,231,232,1);
+  	height:4600px;*/
+    background:rgba(230,231,232,1);
+    height:100px;
   }
 
-  .sectionSeparatorPink {
-  	height: 350px;
-  	background: linear-gradient(rgba(191, 36, 84, 0.0), rgba(191, 36, 84, 0.0)), url('img/header.jpg') no-repeat center top fixed;
-    background-size: cover;
-  	margin-top: 0px;
+  /* foreground (balloons/landscape)*/
+  div#parallax-bg-1{
+  	position: absolute;
+  	width: 1200px;
+  	top: 0;
+  	left: 50%;
+  	margin-left: -600px;
+  	z-index: 1;
+  }
+  /* background middle layer*/
+  div#parallax-bg-2{
+  	position: absolute;
+  	width: 1200px;
+  	top: 0;
+  	left: 50%;
+  	margin-left: -600px;
+  	z-index: 2;
+  }
+  /* background layer */
+  div#parallax-bg-3{
+  	position: absolute;
+  	width: 960px;
+  	top: 0;
+  	left: 50%;
+  	margin-left: -470px;
+  	z-index: 3;
+  }
+  /* foreground */
+  div#parallax-bg-3 div{
+  	background-repeat:no-repeat;
+  	position:absolute;
+  	display:block;
+  	overflow:hidden;
+  }
+  div#bg-3-1{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon.png');
+  	width:529px;
+  	height:757px;
+  	top:-100px;
+  	right:100px;
+  }
+  div#bg-3-2{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon2.png');
+  	width:603px;
+  	height:583px;
+  	top:150px;
+  	right:70px;
+  }
+  div#bg-3-3{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon3.png');
+  	width:446px;
+  	height:713px;
+  	top:100px;
+  	right:140px;
+  }
+  div#bg-3-4{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/ground.png');
+  	width:1104px;
+  	height:684px;
+  	top:300px;
+  	right:0px;
+  }
+  /* middle layer clouds */
+  div#parallax-bg-2 div{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-lg1.png');
+  	background-repeat:no-repeat;
+  	position:absolute;
+  	display:block;
+  	width:488px;
+  	height:238px;
+  	overflow:hidden;
   }
 
-  .sectionSeparatorPink:first-child {
-  	margin-top: 0;
+  div#bg-2-1{
+  	/*top:100px;
+  	left:-310px;*/
+    top:0px;
+    left:-310px;
+  }
+  div#bg-2-2{
+  	top:270px;
+  	right:-70px;
+  }
+  div#bg-2-3{
+  	top:870px;
+  	left:-300px;
+  }
+  div#bg-2-4{
+  	top:1120px;
+  	right:-130px;
+  }
+  div#bg-2-5{
+  	top:1620px;
+  	left:140px;
+  }
+  div#bg-2-6{
+  	top:720px;
+  	left:340px;
   }
 
-  .sectionSeparatorBlue {
-  	height: 350px;
-  	background: linear-gradient(rgba(13, 44, 67, 0.0), rgba(13, 44, 67, 0.0)), url('img/header.jpg') no-repeat center top fixed;
-    background-size: cover;
-  	margin-top: 0px;
+  /*background layer clouds */
+  div#parallax-bg-1 div{
+  	background-repeat:no-repeat;
+  	position:absolute;
+  	display:block;
+  	width:488px;
+  	height:138px;
+  	overflow:hidden;
+  }
+  div#bg-1-1{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-sm1.png');
+  	/*top:200px;
+  	right:450px;*/
+    top:200px;
+  	right:450px;
+  }
+  div#bg-1-2{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-lg2.png');
+  	top:420px;
+  	left:0px;
+  }
+  div#bg-1-3{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-sm1.png');
+  	top:850px;
+  	right:-290px;
+  }
+  div#bg-1-4{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-sm1.png');
+  	top:1350px;
+  	left:200px;
+  }
+  div#bg-1-5{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-lg2.png');
+  	top:1200px;
+  	left:-200px;
   }
 
-  .sectionSeparatorBlue:first-child {
-  	margin-top: 0;
-  }
-
-  .sectionSeparatorGreen {
-    height: 350px;
-    background: linear-gradient(rgba(18, 103, 57, 0.0), rgba(18, 103, 57, 0.0)), url('img/header.jpg') no-repeat center top fixed;
-    background-size: cover;
-    margin-top: 0px;
-  }
-
-  .sectionSeparatorGreen:first-child {
-    margin-top: 0;
-  }
-
-  .sectionSeparatorHeader {
-    height: 800px;
-    background: linear-gradient(rgba(18, 103, 57, 0.0), rgba(18, 103, 57, 0.0)), url('img/header.jpg') no-repeat center top fixed;
-    background-size: cover;
-    margin-top: 0px;
-  }
-
-  .sectionSeparatorHeader:first-child {
-    margin-top: 0;
-  }
-
-  .sectionSeparatorFooter {
-    height: 200px;
-    background: linear-gradient(rgba(18, 103, 57, 0.0), rgba(18, 103, 57, 0.0)), url('img/header.jpg') no-repeat center top fixed;
-    background-size: cover;
-    margin-top: 0px;
-  }
-
-  .sectionSeparatorFooter:first-child {
-    margin-top: 0;
-  }
 </style>
 
 </head>
@@ -899,16 +993,17 @@
 
   <!-- Welcome panel -->
 
-  <section class="contact bg-primary text-center sectionSeparatorHeader" id="home">
+  <section class="contact bg-primary text-center" id="home" style="background-image:url('img/header.jpg');height:800px">
     <div class="container">
-      <div class="row" style="padding-top:180px">
-        <div class="col-lg-8 text-left">
-          <div class="header-content" style="padding:50px;color:white;background-color:rgba(0,0,0,0.3);">
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <div class="header-content">
             <!-- Ugly gap to text -->
+            <br><br><br><br><br><br><br><br><br>
             <div class="header-content" style="color:#ffffff">
-              <h1>CCI Toolbox<br>
+              <h1 class="mb-5">CCI Toolbox<br>
                 <div style="color:#F4B12A">
-                  The Climate Analysis Toolbox of the <br>ESA Climate Change Initiative.
+                  The Climate Analysis Toolbox of the <br>ESA Climate Change Initiative.</h1>
                 </div>
               </div>
             </div>
@@ -982,6 +1077,39 @@
       </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+<section style="background-color:#FFBff1">
+
+<div class="parallax-bg" id="parallax-bg-3">
+
+  		    <div id="bg-3-1"></div>
+  		    <div id="bg-3-2"></div>
+</div>
+<div class="parallax-bg" id="parallax-bg-2">
+
+  		    <div id="bg-2-1"></div>
+  		    <div id="bg-2-2"></div>
+</div>
+<div class="parallax-bg" id="parallax-bg-1">
+
+  		    <div id="bg-1-1"></div>
+  		    <div id="bg-1-2"></div>
+</div>
+
+</section>
+
+
+
+
     <!-- GUI panel -->
 
     <section class="contact text-center bg-primary">
@@ -1030,21 +1158,9 @@
       </div>
     </section>
 
-    <!-- Section separator -->
-
-    <section class="sectionSeparatorPink text-center" id="download" style="color:#FDC436">
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(203,62,104,0.7)">
-            <h2>Download</h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Download panel -->
 
-    <section class="contact text-center" style="color:#ffffff;background-color:#CB3E68">
+    <section class="contact text-center" id="download" style="color:#ffffff;background-color:#CB3E68">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
@@ -1194,21 +1310,9 @@
       </div>
     </section>
 
-    <!-- Section separator -->
-
-    <section class="sectionSeparatorBlue text-center" id="support" style="color:#FDC436">
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(15,59,84,0.7)">
-            <h2>Support</h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Support panel -->
 
-    <section class="contact"  style="color:#ffffff;background-color:#0F3B54">
+    <section class="contact" id="support" style="color:#ffffff;background-color:#0F3B54">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
@@ -1251,21 +1355,9 @@
       </div>
     </section>
 
-    <!-- Section separator -->
-
-    <section class="sectionSeparatorGreen text-center" id="team" style="color:#126739">
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(18,103,57,0.7)">
-            <h2>Team</h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Team panel -->
 
-    <section class="contact" style="color:#ffffff;background-color:#126739">
+    <section class="contact" id="team" style="color:#ffffff;background-color:#0F3B54">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -1275,22 +1367,11 @@
             <h2>International cooperation.<br>
               Across science & industry.
             </h2>
-            <p class="text-muted"> <!-- style="font-size: 16px;"-->
+            <p class="text-muted">
               Made in Germany ( And Norway ) [ And Switzerland ] { And The United Kingdom }.<br>
               The CCI Toolbox is built through international cooperation, across science <br>and industry,
               and is supported by the <a href="http://www.esa.int/">European Space Agency (ESA)</a>.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section separator -->
-
-    <section class="sectionSeparatorFooter text-center" id="support" style="color:#FDC436">
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(15,59,84,0.0)">
           </div>
         </div>
       </div>
@@ -1443,6 +1524,19 @@
       scrollIt(x);
     });
 
+    jQuery(document).ready(function(){
+      $(window).scroll(function(e){
+      	parallaxScroll();
+    	});
+
+    	function parallaxScroll(){
+    		var scrolled = $(window).scrollTop();
+    		$('#parallax-bg-1').css('top',(0-(scrolled*.25))+'px');
+    		$('#parallax-bg-2').css('top',(0-(scrolled*.4))+'px');
+    		$('#parallax-bg-3').css('top',(0-(scrolled*.75))+'px');
+    	}
+
+     });
 
   </script>
   </body>
