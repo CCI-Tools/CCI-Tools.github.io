@@ -840,7 +840,7 @@
   }
 
   .sectionSeparatorHeader {
-    height: 800px;
+    height: 1200px;
     background: linear-gradient(rgba(18, 103, 57, 0.0), rgba(18, 103, 57, 0.0)), url('img/header.jpg') no-repeat center top fixed;
     background-size: cover;
     margin-top: 0px;
@@ -860,6 +860,9 @@
   .sectionSeparatorFooter:first-child {
     margin-top: 0;
   }
+
+  p { font-size: 17px !important; }
+
 </style>
 
 </head>
@@ -901,7 +904,7 @@
 
   <section class="contact bg-primary text-center sectionSeparatorHeader" id="home">
     <div class="container">
-      <div class="row" style="padding-top:180px">
+      <div class="row" style="padding-top:300px">
         <div class="col-lg-8 text-left">
           <div class="header-content" style="padding:50px;color:white;background-color:rgba(0,0,0,0.3);">
             <!-- Ugly gap to text -->
@@ -950,16 +953,6 @@
               <div class="row">
                 <div class="col-lg-4">
                   <div class="feature-item">
-                    <img src="img/mockgui.png" width="170" style="padding:10px" )>
-                    <h3>A Graphical User Interface</h3>
-                    <p class="text-muted">The Cate Desktop application provides
-                      a graphical user interface to the same functionality
-                      provided by the Command Line Interface.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="feature-item">
                     <img src="img/Terminal-icon.png" width="170" style="padding:10px" )>
                     <h3>A Command Line Interface</h3>
                     <p class="text-muted">Access and process ESA climate data
@@ -968,6 +961,15 @@
                   </div>
                 </div>
                 <div class="col-lg-4">
+                  <div class="feature-item">
+                    <img src="img/mockgui.png" width="170" style="padding:10px" )>
+                    <h3>A Graphical User Interface</h3>
+                    <p class="text-muted">The Cate Desktop application provides
+                      a graphical user interface to the same functionality
+                      provided by the Command Line Interface.
+                    </p>
+                  </div>
+                </div>                <div class="col-lg-4">
                   <div class="feature-item">
                     <img src="img/Python-icon.png" width="170" style="padding:10px" )>
                     <h3>A Python API</h3>
@@ -984,7 +986,7 @@
 
     <!-- GUI panel -->
 
-    <section class="contact text-center bg-primary">
+    <section class="contact text-center bg-primary" style="background-color:#FFB031">
       <div class="container">
         <div class="row">
           <div class="col-md-10 mx-auto">
@@ -1035,7 +1037,7 @@
     <section class="sectionSeparatorPink text-center" id="download" style="color:#FDC436">
       <div class="container ">
         <div class="row">
-          <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(203,62,104,0.7)">
+          <div class="col-md-4 text-center" style="padding:50px;color:white;background-color:rgba(203,62,104,0.7)">
             <h2>Download</h2>
           </div>
         </div>
@@ -1256,7 +1258,7 @@
     <section class="sectionSeparatorGreen text-center" id="team" style="color:#126739">
       <div class="container ">
         <div class="row">
-          <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(18,103,57,0.7)">
+          <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(88,88,88,0.7)">
             <h2>Team</h2>
           </div>
         </div>
@@ -1265,7 +1267,7 @@
 
     <!-- Team panel -->
 
-    <section class="contact" style="color:#ffffff;background-color:#126739">
+    <section class="contact" style="color:#ffffff;background-color:#888888">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -1275,10 +1277,10 @@
             <h2>International cooperation.<br>
               Across science & industry.
             </h2>
-            <p class="text-muted"> <!-- style="font-size: 16px;"-->
+            <p><text style="color:#000000"> <!-- style="font-size: 16px;"-->
               Made in Germany ( And Norway ) [ And Switzerland ] { And The United Kingdom }.<br>
               The CCI Toolbox is built through international cooperation, across science <br>and industry,
-              and is supported by the <a href="http://www.esa.int/">European Space Agency (ESA)</a>.
+              and is supported by the <a href="http://www.esa.int/">European Space Agency (ESA)</a>.</text>
             </p>
           </div>
         </div>
@@ -1300,13 +1302,13 @@
 
     <footer style="color:#808080;background-color:#000000">
       <div class="container">
-        <p><br>&copy; 2017 CCI Toolbox Project Partners. All Rights Reserved.
+        <p style="font-size:13px !important"><br>&copy; 2017 CCI Toolbox Project Partners. All Rights Reserved.
           The CCI Toolbox software is provided under the <a style="color:#aaaaaa" href="https://opensource.org/licenses/MIT">
           MIT License</a>.</p>
           <div>
             <img src="img/partnersInvert2.png" width="810" style="padding:10px" )>
           </div>
-          <p>
+          <p style="font-size:13px !important">
           The CCI Toolbox project partners comprise
           <a style="color:#aaaaaa" href="http://www.brockmann-consult.de/">Brockmann Consult</a> (Lead Partner),
           <a style="color:#aaaaaa" href="http://telespazio-vega.com/">Telespazio Vega</a>,
@@ -1322,7 +1324,7 @@
           Tom Block, Marco Zühlke, Janis Gailis, Dag Evensberget, Krzysztof Bernat, Rainer Hollmann, Stephan Herzog,
           Petra Fuchs, Luzia Keupp, Chris Merchant,
           Kevin Pearson, Frank Paul, Fay Done, Helen Clifton, Ed Pechorro (ESA Technical Manager), Simon Pinnock (ESA Technical Officer).
-          </p>
+        </p>
         <br>
       </div>
     </footer>
