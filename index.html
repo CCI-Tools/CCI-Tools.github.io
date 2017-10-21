@@ -839,6 +839,17 @@
     margin-top: 0;
   }
 
+  .sectionSeparatorYellow {
+    height: 350px;
+    background: linear-gradient(rgba(253, 196, 54, 0.0), rgba(253, 196, 54, 0.0)), url('img/header.jpg') no-repeat center top fixed;
+    background-size: cover;
+    margin-top: 0px;
+  }
+
+  .sectionSeparatorYellow:first-child {
+    margin-top: 0;
+  }
+
   .sectionSeparatorHeader {
     height: 1200px;
     background: linear-gradient(rgba(18, 103, 57, 0.0), rgba(18, 103, 57, 0.0)), url('img/header.jpg') no-repeat center top fixed;
@@ -891,6 +902,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#support">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#data">Data</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
@@ -1255,6 +1269,61 @@
 
     <!-- Section separator -->
 
+    <section class="sectionSeparatorYellow text-center" id="data" style="color:#000000">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-4" style="padding:50px;color:black;background-color:rgba(253,196,54,0.7)">
+            <h2>Data</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support panel -->
+
+    <section class="contact bg-primary text-center" style="color:#000000;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>ESA Climate data.</h2>
+            <p class="text-muted">
+              The CCI Toolbox gets its data directly from the <br>CCI Open Data Portal, so you don't have to.
+<br><br>
+              But if you're curious, then do feel free to browse <br>the portal at
+              <a href="http://cci.esa.int/data" style="color:#000000;">cci.esa.int/data</a>.
+              It's free and open.
+<br><br>
+It provides
+              WMS, WCS, and OpeNDAP access to ESA climate <br>data through our
+              <a href="javascript: openDashboardWindow()" style="color:#000000;">
+              CCI Dashboard
+              </a>
+              and
+              <a href="javascript: openSearchWindow()" style="color:#000000;">
+              CCI Search
+              </a>
+              facilities. <br>If you prefer
+              <a href="javascript: openFtpWindow()" style="color:#000000;">
+              ftp
+              </a>
+              however, we have that too.
+            <br>
+            We provide support on the data via
+            <a href="mailto:help@esa-portal-cci.org?subject=RequestForHelp" style="color:#000000;">
+            email</a>.
+            .</p>
+            </div>
+          <div class="col-md-6">
+            <a href="javascript: openDashboardWindow()" style="color:#000000;">
+              <img src="img/dashboardPerspective.png" style="float:center;" width="420" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section separator -->
+
     <section class="sectionSeparatorGreen text-center" id="team" style="color:#126739">
       <div class="container ">
         <div class="row">
@@ -1336,6 +1405,20 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/new-age.min.js"></script>
     <script>
+
+    function openDashboardWindow() {
+      window.open("http://cci.esa.int/sites/default/dashboard/index.html#/","mywindow","menubar=1,resizable=1,width=1400,height=750");
+    }
+
+    function openSearchWindow()
+    {
+        window.open("http://cci.esa.int/sites/default/searchui/index.html#/","mywindow","menubar=1,resizable=1,width=1400,height=750,scrollbars=1");
+    }
+
+    function openFtpWindow()
+    {
+      window.open("ftp://anon-ftp.ceda.ac.uk/neodc/esacci/" , "mywindow","menubar=1,resizable=1,width=1400,height=750,scrollbars=1");
+    }
 
     // Codepen.io slider
     let active = false;
