@@ -879,6 +879,82 @@
 
   p { font-size: 17px !important; }
 
+  .card-container {
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+    * {box-sizing: border-box;}
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 900px) {
+    .card-container {
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+    }
+  }
+
+  .card {
+    margin: 8px;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media screen and (max-width: 900px) {
+    .card {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 33%;
+          -ms-flex: 0 1 33%;
+              flex: 0 1 33%;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .card {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 100%;
+          -ms-flex: 0 1 100%;
+              flex: 0 1 100%;
+    }
+  }
+
+  .card:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .card .image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .card .details {
+    # padding: 0px; # 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+
+  .card3 {
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
+
 </style>
 
 </head>
@@ -1233,7 +1309,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <h2>Made for users, by users. <br>We are happy to support you.</h2>
+            <h2>We are happy to support you.</h2>
             <p class="text-muted">
               Please feel free posting any support and feature requests in the
               <a href="https://groups.google.com/forum/#!forum/cci-tools" target="_blank">User Forum</a> and<br/>
@@ -1344,23 +1420,69 @@ It provides
 
     <!-- Team panel -->
 
-    <section class="contact" style="color:#ffffff;background-color:#888888">
+    <section class="contact" style="color:#ffffff;background-color:#B3B3B3">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <img alt="githubLogo" src="img/if_5360_-_Dzone_1313559.png" width="320" />
-          </div>
           <div class="col-md-8">
             <h2>International cooperation.<br>
               Across science & industry.
             </h2>
             <p><text style="color:#000000"> <!-- style="font-size: 16px;"-->
               Made in Germany ( And Norway ) [ And Switzerland ] { And The United Kingdom }.<br>
-              The CCI Toolbox is built through international cooperation, across science <br>and industry,
-              and is supported by the <a href="http://www.esa.int/" target="_blank">European Space Agency (ESA)</a>.</text>
+              The CCI Toolbox is built through international cooperation, across science <br>and industry.
+              The project partners comprise
+              <a href="http://www.brockmann-consult.de/" target="_blank">Brockmann Consult</a> (Lead Partner),
+              <a href="http://telespazio-vega.com/" target="_blank">Telespazio Vega</a>,
+              <a href="https://www.stcorp.nl/" target="_blank">S[&]T</a>,
+              <a href="http://www.dwd.de/" target="_blank">Deutscher Wetterdienst</a>,
+              <a href="http://www.reading.ac.uk/" target="_blank">University of Reading</a>, and
+              <a href="http://www.uzh.ch/en.html" target="_blank">University of Zurich</a>.
             </p>
           </div>
+          <div class="col-md-4" style="vertical-align:top">
+            <img alt="githubLogo" src="img/rgb-128.png" width="200" style="vertical-align:top"/>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="contact" style="color:#ffffff;background-color:#CCCCCC">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <iframe height="380" src="http://www.youtube.com/embed/7chA5AHQO1I?autoplay=0" width="675px"></iframe>
+          </div>
+          <div class="col-md-4">
+            <h2><text style="color:#000000"> Made for users, by users.
+            </h2>
+            <p class="text-muted"><text style="color:#000000">
+              Climate data users are embedded in the CCI Toolbox team, working alongside the software developers.<br><br>
+              These "Champion Users" - led by Rainer Hollman of Deutscher Wetterdienst (DWD) - define, drive and validate the
+              CCI Toolbox development direction. Here, Rainer talks about his work on the Cloud Essential Climate Variable (ECV)
+              dataset production in the Climate Change Initiative (CCI).
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <section class="contact" style="color:#ffffff;background-color:#B3B3B3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Supported by the<br>ESA Climate Office.
+            </h2>
+            <p class="text-muted"><text style="color:#000000">
+              The CCI Toolbox project is supported by the
+              <a href="http://www.esa.int/" target="_blank">European Space Agency (ESA)</a>
+              and forms part of the ESA Climate Change Initiative (CCI), the ESA flagship programme
+              for satellite monitoring of climate change in support of the United Nations Framework Convention on Climate Change (UNFCCC).
+              <br><br>The ESA Climate Office is responsible for defining the CCI programme of work and overseeing its implementation.
+              Here, Pascal Lecomte (Head of ESA Climate Office) describes how it all began.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <iframe height="380" src="http://www.youtube.com/embed/I0-ZyiIbCc8?autoplay=0" width="675px"></iframe>
+          </div>
       </div>
     </section>
 
