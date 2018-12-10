@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W4V93P8');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>CCI Toolbox</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/new-age.min.css" rel="stylesheet">
+
+  <!-- Tailored Codepen.io snippets -->
+  <style>
+
+  .image-grid div {
+    width: 25%;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    line-height: 1.6em;
+  }
+
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 400px) {
+    .image-grid {
+      flex-direction: column;
+      flex-wrap: no-wrap;
+    }
+
+  .image-grid div { width: 100%; }
+
+  /* Timeline template for CCI Toolbox installation */
+
+  .timeline {
+    position: relative;
+    width: 660px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 1em 0;
+    list-style-type: none;
+  }
+
+  .timeline:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: ' ';
+    display: block;
+    width: 6px;
+    height: 100%;
+    margin-left: -3px;
+    background: rgb(80,80,80);
+    background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+    background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    z-index: 5;
+  }
+
+  .timeline li {
+    padding: 1em 0;
+  }
+
+  .timeline li:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .direction-l {
+    position: relative;
+    width: 300px;
+    float: left;
+    text-align: right;
+  }
+
+  .direction-r {
+    position: relative;
+    width: 300px;
+    float: right;
+  }
+
+  .flag-wrapper {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .flag {
+    position: relative;
+    display: inline;
+    background: rgb(248,248,248);
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .direction-l .flag {
+    -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  }
+
+  .direction-r .flag {
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  }
+
+  .direction-l .flag:before,
+  .direction-r .flag:before {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    content: ' ';
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-top: -10px;
+    background: #fff;
+    border-radius: 10px;
+    border: 4px solid rgb(255,80,80);
+    z-index: 10;
+  }
+
+  .direction-r .flag:before {
+    left: -40px;
+  }
+
+  .direction-l .flag:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    margin-top: -8px;
+    border: solid transparent;
+    border-left-color: rgb(248,248,248);
+    border-width: 8px;
+    pointer-events: none;
+  }
+
+  .direction-r .flag:after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    margin-top: -8px;
+    border: solid transparent;
+    border-right-color: rgb(248,248,248);
+    border-width: 8px;
+    pointer-events: none;
+  }
+
+  .time-wrapper {
+    display: inline;
+    line-height: 1em;
+    font-size: 0.66666em;
+    color: rgb(250,80,80);
+    vertical-align: middle;
+  }
+
+  .direction-l .time-wrapper {
+    float: left;
+  }
+
+  .direction-r .time-wrapper {
+    float: right;
+  }
+
+  .time {
+    display: inline-block;
+    padding: 4px 6px;
+    background: rgb(248,248,248);
+  }
+
+  .desc {
+    margin: 1em 0.75em 0 0;
+    font-size: 0.77777em;
+    font-style: italic;
+    line-height: 1.5em;
+  }
+
+  .direction-r .desc {
+    margin: 1em 0 0 0.75em;
+  }
+
+  /* Timeline queries */
+
+  @media screen and (max-width: 660px) {
+
+  .timeline {
+   	width: 100%;
+  	padding: 4em 0 1em 0;
+  }
+
+  .timeline li {
+  	padding: 2em 0;
+  }
+
+  .direction-l,
+  .direction-r {
+  	float: none;
+  	width: 100%;
+  	text-align: center;
+  }
+
+  .flag-wrapper {
+  	text-align: center;
+  }
+
+  .flag {
+  	background: rgb(255,255,255);
+  	z-index: 15;
+  }
+
+  .direction-l .flag:before,
+  .direction-r .flag:before {
+    position: absolute;
+    top: -30px;
+  	left: 50%;
+  	content: ' ';
+  	display: block;
+  	width: 12px;
+  	height: 12px;
+  	margin-left: -9px;
+  	background: #fff;
+  	border-radius: 10px;
+  	border: 4px solid rgb(255,80,80);
+  	z-index: 10;
+  }
+
+  .direction-l .flag:after,
+  .direction-r .flag:after {
+  	content: "";
+  	position: absolute;
+  	left: 50%;
+  	top: -8px;
+  	height: 0;
+  	width: 0;
+  	margin-left: -8px;
+  	border: solid transparent;
+  	border-bottom-color: rgb(255,255,255);
+  	border-width: 8px;
+  	pointer-events: none;
+  }
+
+  .time-wrapper {
+  	display: block;
+  	position: relative;
+  	margin: 4px 0 0 0;
+  	z-index: 14;
+  }
+
+  .direction-l .time-wrapper {
+  	float: none;
+  }
+
+  .direction-r .time-wrapper {
+  	float: none;
+  }
+
+  .desc {
+  	position: relative;
+  	margin: 1em 0 0 0;
+  	padding: 1em;
+  	background: rgb(245,245,245);
+  	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+  	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+  	box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    z-index: 15;
+  }
+
+  .direction-l .desc,
+  .direction-r .desc {
+  	position: relative;
+  	margin: 1em 1em 0 1em;
+  	padding: 1em;
+    z-index: 15;
+  }}
+
+  @media screen and (min-width: 400px), screen and (max-width: 660px) {
+    .direction-l .desc,
+    .direction-r .desc {
+    	margin: 1em 4em 0 4em;
+    }
+  }}
+
+  .portfolio-box {
+    position: relative;
+    display: block;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .portfolio-box .portfolio-box-caption {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    background: rgba(240, 95, 64, 0.9);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    padding: 0 15px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+  }
+
+  .portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+  }
+
+  .portfolio-box:focus {
+    outline: none;
+  }
+
+  @media (min-width: 768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+      font-size: 16px;
+    }
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+      font-size: 22px;
+    }
+  }
+
+  /* Need to tidy, consolidate or remove */
+  body {
+    margin: 0;
+    padding: 0;
+    background: rgb(230,230,230);
+    color: rgb(50,50,50);
+    line-height: 1.6em;
+  }
+
+  /* Timeline template again, need to remove css redundancy */
+  .timeline {
+    position: relative;
+    width: 660px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 1em 0;
+    list-style-type: none;
+  }
+
+  .timeline:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: ' ';
+    display: block;
+    width: 3px;
+    height: 100%;
+    margin-left: -3px;
+    background: rgb(80,80,80);
+    background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+    background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    z-index: 5;
+  }
+
+  .timeline li {
+    padding: 1em 0;
+  }
+
+  .timeline li:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .direction-l {
+    position: relative;
+    width: 295px;
+    float: left;
+    text-align: right;
+  }
+
+  .direction-r {
+    position: relative;
+    width: 298px;
+    float: right;
+    text-align: left;
+  }
+
+  .flag-wrapper {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .flag {
+    position: relative;
+    display: inline;
+    background: rgb(250,250,250);
+    color: rgb(80,80,80);
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .direction-l .flag {
+    -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  }
+
+  .direction-r .flag {
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  }
+
+  .direction-l .flag:before,
+  .direction-r .flag:before {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    content: ' ';
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-top: -10px;
+    background: #fff;
+    border-radius: 10px;
+    border: 4px solid rgb(255,80,80);
+    z-index: 10;
+  }
+
+  .direction-r .flag:before {
+    left: -40px;
+  }
+
+  .direction-l .flag:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    margin-top: -8px;
+    border: solid transparent;
+    border-left-color: rgb(248,248,248);
+    border-width: 8px;
+    pointer-events: none;
+  }
+
+  .direction-r .flag:after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    margin-top: -8px;
+    border: solid transparent;
+    border-right-color: rgb(248,248,248);
+    border-width: 8px;
+    pointer-events: none;
+  }
+
+  .time-wrapper {
+    display: inline;
+    line-height: 1em;
+    font-size: 0.66666em;
+    color: rgb(250,80,80);
+    vertical-align: middle;
+  }
+
+  .direction-l .time-wrapper {
+    float: left;
+  }
+
+  .direction-r .time-wrapper {
+    float: right;
+  }
+
+  .time {
+    display: inline-block;
+    padding: 4px 6px;
+    background: rgb(248,248,248);
+  }
+
+  .desc {
+    margin: 1em 0.75em 0 0;
+    font-size: 0.77777em;
+    font-style: italic;
+    line-height: 1.5em;
+  }
+
+  .direction-r .desc {
+    margin: 1em 0 0 0.75em;
+  }
+
+  /* Timeline, again mostly redundant, need to understand which part to remove */
+
+  @media screen and (max-width: 660px) {
+
+  .timeline {
+    width: 100%;
+    padding: 4em 0 1em 0;
+  }
+
+  .timeline li {
+    padding: 2em 0;
+  }
+
+  .direction-l,
+  .direction-r {
+    float: none;
+    width: 100%;
+  	text-align: center;
+  }
+
+  .flag-wrapper {
+    text-align: center;
+  }
+
+  .flag {
+    background: rgb(255,255,255);
+    z-index: 15;
+  }
+
+  .direction-l .flag:before,
+  .direction-r .flag:before {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+  	content: ' ';
+  	display: block;
+    width: 12px;
+    height: 12px;
+    margin-left: -9px;
+    background: #fff;
+    border-radius: 10px;
+    border: 4px solid rgb(255,80,80);
+    z-index: 10;
+  }
+
+  .direction-l .flag:after,
+  .direction-r .flag:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    height: 0;
+    width: 0;
+    margin-left: -8px;
+    border: solid transparent;
+    border-bottom-color: rgb(255,255,255);
+    border-width: 8px;
+    pointer-events: none;
+  }
+
+  .time-wrapper {
+    display: block;
+    position: relative;
+    margin: 4px 0 0 0;
+    z-index: 14;
+  }
+
+  .direction-l .time-wrapper {
+    float: none;
+  }
+
+  .direction-r .time-wrapper {
+    float: none;
+  }
+
+  .desc {
+    position: relative;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    background: rgb(245,245,245);
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    z-index: 15;
+  }
+
+  .direction-l .desc,
+  .direction-r .desc {
+  	position: relative;
+    margin: 1em 1em 0 1em;
+  	padding: 1em;
+    z-index: 15;
+  }}
+
+  @media screen and (min-width: 400px ?? max-width: 660px) {
+    .direction-l .desc,
+    .direction-r .desc {
+      margin: 1em 4em 0 4em;
+    }}
+
+  *{
+    margin:0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .wrapper {
+    width: 902px;
+    height: 560px;
+    max-height:100vh;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate3d(-50%,-50%,0);
+    overflow:hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  .bottom,
+  .middle,
+  .top {
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+    pointer-events:none;
+    overflow: hidden;
+      &>img{
+        height:100%;
+      }
+    }
+
+  .top {
+    width:125px;
+  }
+
+  .scroller {
+    width: 50px;
+    height:50px;
+    position: absolute;
+    left:100px;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:50%;
+    background-color: #fff;
+    opacity:0.9;
+    transition: opacity 0.12s ease-in-out;
+    pointer-events:auto;
+    cursor: pointer;
+    box-shadow: 3.5px 0px 7px rgba(100, 100, 100, 0.2);
+  }
+
+  .scroller-middle {
+    margin-top:25px;
+  }
+
+  .scroller-top {
+    margin-top:-25px;
+  }
+
+  .scroller:hover {
+    opacity:1;
+  }
+
+  .scrolling {
+    pointer-events:none;
+    opacity:1;
+    // z-index: 1;
+  }
+
+  .scroller__thumb {
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    padding: 7px;
+  }
+
+  .scroller:before,
+  .scroller:after {
+    content:" ";
+    display: block;
+    width: 7px;
+    height: 9999px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.5px;
+    z-index: 30;
+    transition:0.1s;
+    box-shadow: 3.5px 0px 7px rgba(100, 100, 100, 0.2);
+  }
+
+  .scroller:before {
+    top:49px;
+  }
+
+  .scroller:after {
+    bottom:49px;
+  }
+
+  .scroller-middle>.scroller__thumb {
+    border: 5px solid #FFCCBC;
+    }
+
+  .scroller-middle:before,
+  .scroller-middle:after {
+    background: #FFCCBC;
+  }
+
+  .scroller-top>.scroller__thumb {
+    border: 5px solid #FFAB91;
+  }
+
+  .scroller-top:before,
+  .scroller-top:after {
+    background: #FFAB91;
+  }
+
+  #background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+  }
+
+  .stretch { min-width:100%; min-height:100%; width:auto; height:auto; }
+
+
+
+
+
+
+
+
+
+
+
+  body{
+    /*background:rgba(230,231,232,1);
+  	height:4600px;*/
+    background:rgba(230,231,232,1);
+    height:100px;
+  }
+
+  /* foreground (balloons/landscape)*/
+  div#parallax-bg-1{
+  	position: absolute;
+  	width: 1200px;
+  	top: 0;
+  	left: 50%;
+  	margin-left: -600px;
+  	z-index: 1;
+  }
+  /* background middle layer*/
+  div#parallax-bg-2{
+  	position: absolute;
+  	width: 1200px;
+  	top: 0;
+  	left: 50%;
+  	margin-left: -600px;
+  	z-index: 2;
+  }
+  /* background layer */
+  div#parallax-bg-3{
+  	position: absolute;
+  	width: 960px;
+  	top: 0;
+  	left: 50%;
+  	margin-left: -470px;
+  	z-index: 3;
+  }
+  /* foreground */
+  div#parallax-bg-3 div{
+  	background-repeat:no-repeat;
+  	position:absolute;
+  	display:block;
+  	overflow:hidden;
+  }
+  div#bg-3-1{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon.png');
+  	width:529px;
+  	height:757px;
+  	top:-100px;
+  	right:100px;
+  }
+  div#bg-3-2{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon2.png');
+  	width:603px;
+  	height:583px;
+  	top:150px;
+  	right:70px;
+  }
+  div#bg-3-3{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon3.png');
+  	width:446px;
+  	height:713px;
+  	top:100px;
+  	right:140px;
+  }
+  div#bg-3-4{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/ground.png');
+  	width:1104px;
+  	height:684px;
+  	top:300px;
+  	right:0px;
+  }
+  /* middle layer clouds */
+  div#parallax-bg-2 div{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-lg1.png');
+  	background-repeat:no-repeat;
+  	position:absolute;
+  	display:block;
+  	width:488px;
+  	height:238px;
+  	overflow:hidden;
+  }
+
+  div#bg-2-1{
+  	/*top:100px;
+  	left:-310px;*/
+    top:0px;
+    left:-310px;
+  }
+  div#bg-2-2{
+  	top:270px;
+  	right:-70px;
+  }
+  div#bg-2-3{
+  	top:870px;
+  	left:-300px;
+  }
+  div#bg-2-4{
+  	top:1120px;
+  	right:-130px;
+  }
+  div#bg-2-5{
+  	top:1620px;
+  	left:140px;
+  }
+  div#bg-2-6{
+  	top:720px;
+  	left:340px;
+  }
+
+  /*background layer clouds */
+  div#parallax-bg-1 div{
+  	background-repeat:no-repeat;
+  	position:absolute;
+  	display:block;
+  	width:488px;
+  	height:138px;
+  	overflow:hidden;
+  }
+  div#bg-1-1{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-sm1.png');
+  	/*top:200px;
+  	right:450px;*/
+    top:200px;
+  	right:450px;
+  }
+  div#bg-1-2{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-lg2.png');
+  	top:420px;
+  	left:0px;
+  }
+  div#bg-1-3{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-sm1.png');
+  	top:850px;
+  	right:-290px;
+  }
+  div#bg-1-4{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-sm1.png');
+  	top:1350px;
+  	left:200px;
+  }
+  div#bg-1-5{
+  	background:url('http://schulzmarcel.de/x/drafts/parallax/img/cloud-lg2.png');
+  	top:1200px;
+  	left:-200px;
+  }
+
+</style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4V93P8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#support">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Welcome panel -->
+
+  <section class="contact bg-primary text-center" id="home" style="background-image:url('img/header.jpg');height:800px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <div class="header-content">
+            <!-- Ugly gap to text -->
+            <br><br><br><br><br><br><br><br><br>
+            <div class="header-content" style="color:#ffffff">
+              <h1 class="mb-5">CCI Toolbox<br>
+                <div style="color:#F4B12A">
+                  The Climate Analysis Toolbox of the <br>ESA Climate Change Initiative.</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About panel -->
+
+    <section class="contact bg-primary text-center" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mx-auto">
+            <h2>The CCI Toolbox (Cate) is a software environment for ingesting,
+              operating on and visualising all ESA Climate Change Initiative data.
+            </h2>
+            <p class="text-muted">
+              The toolbox works by mashing ECV data into a Common Data Model.
+              <br>Users operate on this model, then visualise the results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interfaces panel -->
+
+    <section class="contact text-center" id="interfaces" style="background-color:#FFB031">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 my-auto text-center">
+            <h2>Cate Interfaces</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <img src="img/mockgui.png" width="170" style="padding:10px" )>
+                    <h3>A Graphical User Interface</h3>
+                    <p class="text-muted">The Cate Desktop application provides
+                      a graphical user interface to the same functionality
+                      provided by the Command Line Interface.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <img src="img/Terminal-icon.png" width="170" style="padding:10px" )>
+                    <h3>A Command Line Interface</h3>
+                    <p class="text-muted">Access and process ESA climate data
+                      through a command shell or console terminal.
+                      Use it to write your own batch scripts.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="feature-item">
+                    <img src="img/Python-icon.png" width="170" style="padding:10px" )>
+                    <h3>A Python API</h3>
+                    <p class="text-muted">
+                    The Python API allows you to use Cate in your own Python programs,
+                    and make up new functions for the toolbox too.</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+<section style="background-color:#FFBff1">
+
+<div class="parallax-bg" id="parallax-bg-3">
+
+  		    <div id="bg-3-1"></div>
+  		    <div id="bg-3-2"></div>
+</div>
+<div class="parallax-bg" id="parallax-bg-2">
+
+  		    <div id="bg-2-1"></div>
+  		    <div id="bg-2-2"></div>
+</div>
+<div class="parallax-bg" id="parallax-bg-1">
+
+  		    <div id="bg-1-1"></div>
+  		    <div id="bg-1-2"></div>
+</div>
+
+</section>
+
+
+
+
+    <!-- GUI panel -->
+
+    <section class="contact text-center bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <h2>The Graphical User Interface</h2>
+            <p class="text-muted">
+              Cate Desktop, the CCI Toolbox graphical user interface, provides access to remote & local CCI
+              data sources and a suite of operations to act on the data. This typically results in an in-memory
+              means of holding the data, which we call a "resource". The desktop also
+              provides a means to visualise the data under analysis.
+            </p>
+            <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 my-auto text-center" style="height:520px">
+            <div id="page">
+              <div class="wrapper">
+                <div class="bottom">
+                  <img src="img/descriptionblock.jpg" draggable="false"/>
+                </div>
+                <div class="middle">
+                  <img src="img/guiblock.jpg" draggable="false"/>
+                </div>
+                <div class="scroller scroller-middle">
+                  <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                    <polygon points="0 50 37 68 37 32 0 50" style="fill:#FFCCBC"/>
+                    <polygon points="100 50 64 32 64 68 100 50" style="fill:#FFCCBC"/>
+                  </svg>
+                </div>
+                <div class="top">
+                  <img src="img/descriptionblock.jpg" draggable="false"/>
+                </div>
+                <div class="scroller scroller-top">
+                  <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                    <polygon points="0 50 37 68 37 32 0 50" style="fill:#FFAB91"/>
+                    <polygon points="100 50 64 32 64 68 100 50" style="fill:#FFAB91"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download panel -->
+
+    <section class="contact text-center" id="download" style="color:#ffffff;background-color:#CB3E68">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>The CCI Toolbox is Open Source.<br>
+              Version 1.0 is now available.<br>Includes installers for <br>Windows, Linux & Mac.
+            </h2><br>
+            <p style="color:#FFCCCC">
+              Whether you're on Mac, Windows or Linux, how you use the <br>toolbox is pretty much the same.
+              Follow the Github download<br> instructions below, then let's talk about
+              <a class="js-scroll-trigger" href="#documentation">documentation</a>.
+            </p>
+          <div>
+            <ul class="timeline">
+
+              <!-- 1 -->
+              <li>
+            		<div class="direction-r">
+            			<div class="flag-wrapper">
+            				<span class="flag">Download Installers</span>
+            				<!--<span class="time-wrapper"><span class="time">From GitHub</span></span>-->
+            			</div>
+            			<div class="desc">
+                            Download version 1.0:<br/>
+                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-MacOSX-x86_64.sh">Core</a> & <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/Cate.Desktop-1.0.0.dmg">Desktop</a> for Mac<br/>
+                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-Linux-x86_64.sh">Core</a> & <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-desktop-1.0.0-x86_64.AppImage">Desktop</a> for Linux<br/>
+                            &#8226;&nbsp;&nbsp;Cate <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/cate-1.0.0-Windows-x86_64.exe">Core</a> & <a href="https://github.com/CCI-Tools/cate/releases/download/v1.0.0/Cate.Desktop.Setup.1.0.0.exe">Desktop</a> for Windows<br/>
+                            Or visit Cate's <a href="https://github.com/CCI-Tools/cate/releases">releases page</a><br/>
+                            on GitHub for older versions.
+                        </div>
+            		</div>
+            	</li>
+
+              <!-- 2 -->
+            	<li>
+            		<div class="direction-l">
+            			<div class="flag-wrapper">
+            				<span class="flag">Install Cate Core</span>
+            				<!--<span class="time-wrapper"><span class="time">On your computer</span></span>-->
+            			</div>
+<!--
+            		    <div class="desc">Mac & Linux users do this in a terminal window:<br/>
+                          <code style="color:white;font-style:normal;background-color:#4C4C4C;">
+                            $ bash cate-&lt;version&gt;-&lt;platform&gt;.sh</code><br/>
+                            Windows users just double-click.
+                        </div>
+-->
+                        <div class="desc">
+                          Please read and follow the<br/><a href="http://cate.readthedocs.io/en/latest/user_manual/um_setup.html#installing-cate-core">installation instructions</a>!
+                        </div>
+
+            		 </div>
+            	</li>
+
+            	<!-- 3 -->
+              <li>
+                  <div class="direction-r">
+            			<div class="flag-wrapper">
+            				<span class="flag">Install Cate Desktop</span>
+            				<!--<span class="time-wrapper"><span class="time">On your computer</span></span>-->
+            			</div>
+<!--
+            			<div class="desc">Execute the installer. No bash scripts this time if you're on Mac or Linux.
+                            Note, you need to install Cate Core first!
+                        </div>
+-->
+                    <div class="desc">Execute the installer, that's it.<br/>
+                      Remember, you need to install Cate Core first.<br/>
+                      More <a href="http://cate.readthedocs.io/en/latest/user_manual/um_setup.html#installing-cate-desktop">here</a>.
+                    </div>
+            	  </div>
+               </li>
+             </ul>
+           </div>
+              <p style="color:#FFCCCC">
+                  Details on the Cate system requirements, installation, <br>and configuration can be found
+                  <a href="http://cate.readthedocs.io/en/latest/user_manual/um_setup.html">here</a>.
+              </p>
+          </div>
+          <div class="col-md-4 text-center ">
+            <img alt="githubLogo" src="img/Octocat.png" width="300" style="padding:0px"/><br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentation panel -->
+
+    <section class="contact" id="documentation" style="color:#ffffff;background-color:#BE2454">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Use our documentation.<br>From how to get started.<br>To everything else.<br></h2>
+            <p style="color:#F4B12A"></p>
+            <p style="color:#FFCCCC">
+              Our documentation is <a href="http://cate.readthedocs.io/en/latest/index.html">online</a>.
+              This includes a <a href="http://cate.readthedocs.io/en/latest/quick_start.html">Quick Start</a> to help
+              you get going with the Command Line Interface.
+
+              The <a href="http://cate.readthedocs.io/en/latest/user_manual.html">User Manual</a> chapter describes
+              each of the user interfaces, plus details of the available
+              <a href="http://cate.readthedocs.io/en/latest/op_specs.html">Operations</a>.
+
+              You can add operations to the CCI Toolbox through the
+              <a href="http://cate.readthedocs.io/en/latest/api_reference.html">API</a>. Other technical information
+              includes <a href="http://cate.readthedocs.io/en/latest/architecture.html">CCI Toolbox
+              Architecture</a>, <a href="http://cate.readthedocs.io/en/latest/developer_guide.html">Developer
+              Guide</a> and <a href="http://cate.readthedocs.io/en/latest/detailed_design.html">Detailed Design</a>.
+              We'll have YouTube training videos for you soon. But not yet. We're still working on those.
+            </p>
+          </div>
+          <div class="col-md-4">
+              <img alt="githubLogo" src="img/document.png" width="230" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" style="color:#ffffff;background-color:#CB3E68">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>CCI data sources in<br/>CCI Toolbox v1.0</h2>
+            <p style="color:#F4B12A"></p>
+            <p style="color:#FFCCCC">
+              All ESA CCI datasets published through the
+              ESA <a href="http://cci.esa.int/data">CCI Open Data Portal</a><br>
+              can be typically accessed by Cate's
+              <a class="js-scroll-trigger" href="#interfaces">Python API</a>
+              and
+              <a class="js-scroll-trigger" href="#interfaces">Command Line Interface</a>.
+              <br/><br/>
+              For <text style="color:White;">version 1.0</text> of the CCI Toolbox
+              we have limited the number of CCI datasets available
+              to the Cate Desktop, our
+              <a class="js-scroll-trigger" href="#interfaces">Graphical User Interface</a>.
+              Cate Desktop currently supports the following CCI datasets - Aerosol CCI (x6),
+              Cloud CCI (x6), Fire CCI (x1),
+              Ocean Colour CCI (x28),
+              Ozone CCI (x2),
+              Soil Moisture CCI (x3), and
+              Sea Surface Temperature CCI (x1).<br> More are on the way.
+          </div>
+          <div class="col-md-4">
+              <img alt="githubLogo" src="img/if_stack_1287510.png" width="230" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support panel -->
+
+    <section class="contact" id="support" style="color:#ffffff;background-color:#0F3B54">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Made for users, by users. <br>We are happy to support you.</h2>
+            <p class="text-muted">
+              Please feel free posting any support and feature requests in the
+              <a href="https://groups.google.com/forum/#!forum/cci-tools">User Forum</a> and<br/>
+              consider reporting trouble and bugs in Cate's <a href="https://github.com/CCI-Tools/cate/issues">Issue Tracker</a>.<br>
+              We'll then take it from there, and keep you updated.
+            </p>
+          </div>
+          <div class="col-md-4">
+              <img alt="githubLogo" src="img/if_support_701493.png" width="240" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback panel -->
+
+    <section class="contact" id="feedback" style="color:#ffffff;background-color:#0F2C43">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>We rely on your feedback.<br>To address your needs.<br>
+            </h2>
+            <p class="text-muted">
+              We develop the CCI Toolbox by using Agile methodologies, <br> working side by side with users.
+              This enables us to <br/>quickly respond to your needs. Let us know what you think
+              <br> via the toolbox <a href="https://groups.google.com/forum/#!forum/cci-tools">User Forum</a> or
+              drop us an <br>email at
+              <a href="mailto:climate.office@esa.int?cc=team@ccitools.org?subject=CCI%20Toolbox%20Feedback" target="_top">
+              climate.office@esa.int</a>. We're listening.
+            </p>
+          </div>
+          <div class="col-md-4">
+              <img alt="githubLogo" src="img/if_conversation_512533.png" width="230" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team panel -->
+
+    <section class="contact" id="team" style="color:#ffffff;background-color:#0F3B54">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img alt="githubLogo" src="img/if_5360_-_Dzone_1313559.png" width="320" />
+          </div>
+          <div class="col-md-8">
+            <h2>International cooperation.<br>
+              Across science & industry.
+            </h2>
+            <p class="text-muted">
+              Made in Germany ( And Norway ) [ And Switzerland ] { And The United Kingdom }.<br>
+              The CCI Toolbox is built through international cooperation, across science <br>and industry,
+              and is supported by the <a href="http://www.esa.int/">European Space Agency (ESA)</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer panel including team credits -->
+
+    <footer style="color:#808080;background-color:#000000">
+      <div class="container">
+        <p><br>&copy; 2017 CCI Toolbox Project Partners. All Rights Reserved.
+          The CCI Toolbox software is provided under the <a style="color:#aaaaaa" href="https://opensource.org/licenses/MIT">
+          MIT License</a>.</p>
+          <div>
+            <img src="img/partnersInvert2.png" width="810" style="padding:10px" )>
+          </div>
+          <p>
+          The CCI Toolbox project partners comprise
+          <a style="color:#aaaaaa" href="http://www.brockmann-consult.de/">Brockmann Consult</a> (Lead Partner),
+          <a style="color:#aaaaaa" href="http://telespazio-vega.com/">Telespazio Vega</a>,
+          <a style="color:#aaaaaa" href="https://www.stcorp.nl/">S[&]T</a>,
+          <a style="color:#aaaaaa" href="http://www.dwd.de/">Deutscher Wetterdienst</a>,
+          <a style="color:#aaaaaa" href="http://www.reading.ac.uk/">University of Reading</a>, and
+          <a style="color:#aaaaaa" href="http://www.uzh.ch/en.html">University of Zurich</a>,
+          and is supported by the
+          <a style="color:#aaaaaa" href="http://www.esa.int/">European Space Agency (ESA)</a> as part of the
+          <a style="color:#aaaaaa" href="http://cci.esa.int/">Climate Change Initiative (CCI)</a>.
+          The CCI Toolbox has been produced by
+          Carsten Brockmann (Science Lead), Norman Fomferra (Technical Lead), Anna Corlyon (Project Manager),
+          Tom Block, Marco Zühlke, Janis Gailis, Dag Evensberget, Krzysztof Bernat, Rainer Hollmann, Stephan Herzog,
+          Petra Fuchs, Luzia Keupp, Chris Merchant,
+          Kevin Pearson, Frank Paul, Fay Done, Helen Clifton, Ed Pechorro (ESA Technical Manager), Simon Pinnock (ESA Technical Officer).
+          </p>
+        <br>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core, plugin & template JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/new-age.min.js"></script>
+    <script>
+
+    // Codepen.io slider
+    let active = false;
+    let scrollerMiddle = document.querySelector('.scroller-middle');
+    let scrollerTop = document.querySelector('.scroller-top');
+
+    scrollerMiddle.addEventListener('mousedown',function() {
+      active = "middle";
+      scrollerMiddle.classList.add('scrolling');
+    });
+
+    document.body.addEventListener('mouseup',function() {
+      active = false;
+      scrollerMiddle.classList.remove('scrolling');
+    });
+
+    document.body.addEventListener('mouseleave',function() {
+      active = false;
+      scrollerMiddle.classList.remove('scrolling');
+    });
+
+    scrollerTop.addEventListener('mousedown',function() {
+        active = "top";
+        scrollerTop.classList.add('scrolling');
+    });
+
+    document.body.addEventListener('mouseup',function() {
+      active = false;
+      scrollerTop.classList.remove('scrolling');
+    });
+
+    document.body.addEventListener('mouseleave',function() {
+      active = false;
+      scrollerTop.classList.remove('scrolling');
+    });
+
+    document.body.addEventListener('mousemove',function(e) {
+      if (!active) return;
+      let x = e.pageX;
+      x -= document.querySelector('.wrapper').getBoundingClientRect().left;
+      scrollIt(x);
+    });
+
+    function scrollIt(x) {
+      let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
+
+      if (active==="middle") {
+        document.querySelector('.middle').style.width = transform+"px";
+        scrollerMiddle.style.left = transform-25+"px";
+        if (scrollerTop.getBoundingClientRect().left>scrollerMiddle.getBoundingClientRect().left-5) {
+          document.querySelector('.top').style.width = transform-5+"px";
+          scrollerTop.style.left = transform-30+"px";
+        }
+      }
+
+      if (active==="top") {
+        document.querySelector('.top').style.width = transform+"px";
+        scrollerTop.style.left = transform-25+"px";
+        if (scrollerTop.getBoundingClientRect().left>scrollerMiddle.getBoundingClientRect().left-5) {
+          document.querySelector('.middle').style.width = transform+5+"px";
+          scrollerMiddle.style.left = transform-20+"px";
+        }
+      }
+    }
+
+    active = "middle";
+    scrollIt(460);
+    active = "top";
+    scrollIt(230);
+    active = false;
+
+    scrollerMiddle.addEventListener('touchstart',function() {
+      active = "middle";
+      scrollerMiddle.classList.add('scrolling');
+    });
+
+    document.body.addEventListener('touchend',function() {
+      active = false;
+      scrollerMiddle.classList.remove('scrolling');
+    });
+
+    document.body.addEventListener('touchcancel',function() {
+      active = false;
+      scrollerMiddle.classList.remove('scrolling');
+    });
+
+    scrollerTop.addEventListener('touchstart',function() {
+      active = "top";
+      scrollerTop.classList.add('scrolling');
+    });
+
+    document.body.addEventListener('touchend',function() {
+      active = false;
+      scrollerTop.classList.remove('scrolling');
+    });
+
+    document.body.addEventListener('touchcancel',function() {
+      active = false;
+      scrollerTop.classList.remove('scrolling');
+    });
+
+    document.querySelector('.wrapper').addEventListener('touchmove',function(e) {
+      if (!active) return;
+      e.preventDefault();
+      let x = e.touches[0].pageX;
+      x -= document.querySelector('.wrapper').getBoundingClientRect().left;
+      scrollIt(x);
+    });
+
+    jQuery(document).ready(function(){
+      $(window).scroll(function(e){
+      	parallaxScroll();
+    	});
+
+    	function parallaxScroll(){
+    		var scrolled = $(window).scrollTop();
+    		$('#parallax-bg-1').css('top',(0-(scrolled*.25))+'px');
+    		$('#parallax-bg-2').css('top',(0-(scrolled*.4))+'px');
+    		$('#parallax-bg-3').css('top',(0-(scrolled*.75))+'px');
+    	}
+
+     });
+
+  </script>
+  </body>
+</html>
