@@ -983,16 +983,16 @@
                         <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#news">News</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#download">Download</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#support">Support</a>
+                        <a class="nav-link js-scroll-trigger" href="#news">News</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#data">Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#support">Support</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#team">Team</a>
@@ -1144,42 +1144,6 @@
 
     <!-- Section separator -->
 
-    <section class="sectionSeparatorPink text-center" id="news" style="color:#FDC436">
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-4 text-center" style="padding:50px;color:white;background-color:rgba(74,138,88,0.7)">
-                    <h2>News</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News panel -->
-
-    <section class="contact" style="color:#ffffff;background-color:#4A8A58">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h2>Stay tuned.<br>Read the news.<br></h2>
-                    <p style="color:#F4B12A"></p>
-                    <p style="color:#000000">
-                        Subscribe to our CCI Toolbox
-                        <a href="https://app.popt.in/APIRequest/click/5dd3059a2aac6">news</a>
-                        and <br>we'll let you know when big things happen.
-                        <br><br>
-                        Read our <a href="newsletter/ESA_CCI_Toolbox_Newsletter_Issue_01.pdf">Newsletter #1</a> [20.12.2017]
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <img alt="githubLogo" src="img/news.png" width="230"/>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Section separator -->
-
     <section class="sectionSeparatorPink text-center" id="download" style="color:#FDC436">
         <div class="container ">
             <div class="row">
@@ -1216,6 +1180,7 @@
                         and execute in a terminal window.
                     </p>
 
+<!--
                     <p style="color:#FFCCCC">Users exclusively interested in the CCI Toolbox's<br/>
                         <span style="color: white;">Command Line Interface</span>
                         or its <span style="color: white;">Python package</span><br/>
@@ -1224,6 +1189,7 @@
                         or install into a Python 3.6 Anaconda/Miniconda environment using<br/>
                         <code>conda install -c ccitools -c conda-forge cate-cli</code>.
                     </p>
+-->
 
                     <p style="color:#FFCCCC">
                         Details on the Cate system requirements, installation, <br>and configuration can be found
@@ -1272,23 +1238,93 @@
         </div>
     </section>
 
-    <section class="contact" style="color:#ffffff;background-color:#CB3E68">
+    <!-- Tutorials panel -->
+
+    <section class="contact" id="tutorials" style="color:#ffffff;background-color:#CB3E68">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Get first-class advice.</h2>
+                    <p class="text-muted"> <span style="color: white;">Take a plunge into the CCI Toolbox and watch our tutorials.</span></br>
+                    </p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/w0ZEK4aIC9I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></br>
+                    <p class="text-muted">
+                        <span style="color: white;">This quick start video will introduce you to the fundamentals of using the CCI Toolbox.</span></br>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img alt="githubLogo" src="img/video.png" width="240"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- News Section separator -->
+
+    <section class="sectionSeparatorPink text-center" id="news" style="color:#FDC436">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4 text-center" style="padding:50px;color:white;background-color:rgba(74,138,88,0.7)">
+                    <h2>News</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News panel -->
+
+    <section class="contact" style="color:#ffffff;background-color:#4A8A58">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Stay tuned.<br>Read the news.<br></h2>
+                    <p style="color:#F4B12A"></p>
+                    <p style="color:#000000">
+                        Subscribe to our CCI Toolbox
+                        <a href="https://app.popt.in/APIRequest/click/5dd3059a2aac6">news</a>
+                        and <br>we'll let you know when big things happen.
+                        <br><br>
+                        Read our <a href="newsletter/ESA_CCI_Toolbox_Newsletter_Issue_01.pdf">Newsletter #1</a> [20.12.2017]
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img alt="githubLogo" src="img/news.png" width="230"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data section separator -->
+
+    <section class="sectionSeparatorYellow text-center" id="data" style="color:#000000">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4" style="padding:50px;color:black;background-color:rgba(253,196,54,0.7)">
+                    <h2>Data</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CCI data sources panel -->
+
+    <section class="contact" style="color:#000000;background-color:#FFB031">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <h2>CCI data sources in<br/>the CCI Toolbox</h2>
-                    <p style="color:#F4B12A"></p>
-                    <p style="color:#FFCCCC">
+                    <!--<p style="color:#F4B12A"></p>-->
+                    <p class="text-muted">
                         All ESA CCI datasets published through the
-                        ESA <a href="http://cci.esa.int/data" target="_blank">CCI Open Data Portal</a><br>
+                        ESA <a href="http://cci.esa.int/data" style="color:#000000" target="_blank">CCI Open Data Portal</a><br>
                         can be typically accessed by Cate's
-                        <a class="js-scroll-trigger" href="#interfaces">Python API</a>
+                        <a class="js-scroll-trigger" href="#interfaces" style="color:#000000">Python API</a>
                         and
-                        <a class="js-scroll-trigger" href="#interfaces">Command Line Interface</a>.
+                        <a class="js-scroll-trigger" href="#interfaces" style="color:#000000">Command Line Interface</a>.
                     </p>
-                    <p style="color:#FFCCCC">
+                    <p class="text-muted">
                         Note, that in <span style="color:white">Cate Desktop</span>, the <a class="js-scroll-trigger"
-                                                                                            href="#interfaces">Graphical
+                                                                                            href="#interfaces" style="color:#000000">Graphical
                         User Interface</a>,
                         some datasets do not have an obvious graphical representation, e.g. the display of datasets
                         on a 2D map or 3D globe is naturally limited to the ones having a spatial coverage.
@@ -1301,101 +1337,7 @@
         </div>
     </section>
 
-    <!-- Section separator -->
-
-    <section class="sectionSeparatorBlue text-center" id="support" style="color:#FDC436">
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(15,59,84,0.7)">
-                    <h2>Support</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support panel -->
-
-    <section class="contact" style="color:#ffffff;background-color:#0F2C43">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h2>We are happy to support you.</h2>
-                    <p class="text-muted">
-                        Please feel free posting any support and feature requests in the
-                        <a href="https://groups.google.com/forum/#!forum/cci-tools" target="_blank">User Forum</a> and<br/>
-                        consider reporting trouble and bugs in Cate's
-                        <a href="https://github.com/CCI-Tools/cate/issues" target="_blank">Issue Tracker</a>.<br>
-                        We'll then take it from there.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <img alt="githubLogo" src="img/if_support_701493.png" width="240"/>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support panel -->
-
-    <section class="contact" id="tutorials" style="color:#ffffff;background-color:#0F3B54">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h2>Get first-class advice.</h2>
-                    <p class="text-muted">
-                        Take a plunge into the CCI Toolbox and watch our tutorials.</br>
-                    </p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/w0ZEK4aIC9I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></br>
-                    <p class="text-muted">
-                        This quick start video will introduce you to the fundamentals of using the CCI Toolbox.</br>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <img alt="githubLogo" src="img/video.png" width="240"/>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feedback panel -->
-
-    <section class="contact" id="feedback" style="color:#ffffff;background-color:#0F2C43">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h2>We rely on your feedback.<br>To address your needs.<br>
-                    </h2>
-                    <p class="text-muted">
-                        We develop the CCI Toolbox by using Agile methodologies, <br> working side by side with users.
-                        This enables us to <br/>quickly respond to your needs. Let us know what you think
-                        <br> via the toolbox <a href="https://groups.google.com/forum/#!forum/cci-tools" target="_blank">User
-                        Forum</a> or
-                        drop us an <br>email at
-                        <a href="mailto:climate.office@esa.int?cc=team@ccitools.org?subject=CCI%20Toolbox%20Feedback"
-                           target="_top">
-                            climate.office@esa.int</a>. We're listening.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <img alt="githubLogo" src="img/if_conversation_512533.png" width="240"/>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section separator -->
-
-    <section class="sectionSeparatorYellow text-center" id="data" style="color:#000000">
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-4" style="padding:50px;color:black;background-color:rgba(253,196,54,0.7)">
-                    <h2>Data</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support panel -->
+    <!-- ESA climate data panel -->
 
     <section class="contact bg-primary text-center" style="color:#000000;">
         <div class="container">
@@ -1429,7 +1371,71 @@
         </div>
     </section>
 
-    <!-- Section separator -->
+
+    <!-- Support section separator -->
+
+    <section class="sectionSeparatorBlue text-center" id="support" style="color:#FDC436">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4" style="padding:50px;color:white;background-color:rgba(15,59,84,0.7)">
+                    <h2>Support</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support panel -->
+
+    <section class="contact" style="color:#ffffff;background-color:#0F2C43">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>We are happy to support you.</h2>
+                    <p class="text-muted">
+                        Please feel free posting any support and feature requests in the
+                        <a href="https://groups.google.com/forum/#!forum/cci-tools" target="_blank">User Forum</a> and<br/>
+                        consider reporting trouble and bugs in Cate's
+                        <a href="https://github.com/CCI-Tools/cate/issues" target="_blank">Issue Tracker</a>.
+                        We'll then take it from there. <br> If you haven't yet, please consider to complete our short
+                        <a href="https://tinyurl.com/CCITBX-survey" target="_blank">Online Survey.</a>
+                        It doesn't take long.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img alt="githubLogo" src="img/if_support_701493.png" width="240"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback panel -->
+
+    <section class="contact" id="feedback" style="color:#ffffff;background-color:#0F2C43">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>We rely on your feedback.<br>To address your needs.<br>
+                    </h2>
+                    <p class="text-muted">
+                        We develop the CCI Toolbox by using Agile methodologies, <br> working side by side with users.
+                        This enables us to <br/>quickly respond to your needs. Let us know what you think
+                        <br> via the toolbox <a href="https://groups.google.com/forum/#!forum/cci-tools" target="_blank">User
+                        Forum</a> or
+                        drop us an <br>email at
+                        <a href="mailto:climate.office@esa.int?cc=team@ccitools.org?subject=CCI%20Toolbox%20Feedback"
+                           target="_top">
+                            climate.office@esa.int</a>. We're listening.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img alt="githubLogo" src="img/if_conversation_512533.png" width="240"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Team section separator -->
 
     <section class="sectionSeparatorGreen text-center" id="team" style="color:#126739">
         <div class="container ">
@@ -1700,5 +1706,7 @@
 
 
     </script>
+    <script>(function(t,e,s,o){var n,a,c;t.SMCX=t.SMCX||[],e.getElementById(o)||(n=e.getElementsByTagName(s),a=n[n.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=o,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdyrmxBwkduKe9Dt_2Ft2RTHQefBVr2RU3g80lf62VrOEtL.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+
     </body>
     </html>
